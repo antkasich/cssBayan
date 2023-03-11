@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+h1{
+    text-align: center;
+    line-height: 200%;
+}
+li{
+    list-style: none;
+    border: solid;
+    border-color: tomato;
+}
+input {
+    display: none;
+}
+#bayan .content{
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+#bayan label + input[type="radio"]:checked + .content{
+    max-height: 600px;
+}
