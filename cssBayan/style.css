@@ -1,25 +1,82 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Sono', sans-serif;
   }
+html{
+    overflow: hidden;
+}
+body{
+    background-color: #FFFBE9;}
 h1{
     text-align: center;
-    line-height: 200%;
+}
+h2{
+    text-align: center;
+}
+#bayan{
+    max-width: 75vw;
+    margin-left: 12.5vw;
+    color: blue;
 }
 li{
     list-style: none;
-    border: solid;
-    border-color: tomato;
+    border-top: solid;
+    border-color: gray;
+    padding-top: 1vh;
+}
+li label{
+    font-size: 1.5rem;
+}
+.labelName{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+i{
+    transition-duration: 0.5s;
 }
 input {
     display: none;
 }
+img{
+    max-width:100%;
+    max-height: 30vh;
+}
 #bayan .content{
-    line-height: 26px;
     max-height: 0;
     overflow: hidden;
-    transition: 0.5s;
+    transition-duration: 1s;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
 }
-#bayan label + input[type="radio"]:checked + .content{
+/*Checked*/
+#bayan input[type="radio"]:checked + label{
+    color: black;
+}
+#bayan input[type="radio"]:checked + label .content{
+    max-height: 45vh;
+}
+#bayan input[type="radio"]:checked + label i{
+    transform: rotate(45deg);
+}
+/*Hover*/
+#bayan:hover {
+    color: black;
+    cursor: cell;
+}
+#bayan label:hover{
+    cursor:cell;
+}
+#bayan li:hover .content{
     max-height: 600px;
+}
+#bayan li:hover i{
+    transform: rotate(45deg);
+}
+/*Active*/
+#bayan li:active{
+    color:blue;
+    opacity: 0.7;
 }
