@@ -62,18 +62,20 @@ img{
     transform: rotate(45deg);
 }
 /*Hover*/
-#bayan:hover {
-    color: black;
-    cursor: cell;
-}
-#bayan label:hover{
-    cursor:cell;
-}
-#bayan li:hover .content{
-    max-height: 600px;
-}
-#bayan li:hover i{
-    transform: rotate(45deg);
+@media (hover: hover) {
+    #bayan:hover {
+        color: black;
+        cursor: cell;
+    }
+    #bayan label:hover{
+        cursor:cell;
+    }
+    #bayan li:hover .content{
+        max-height: 600px;
+    }
+    #bayan li:hover i{
+        transform: rotate(45deg);
+    }
 }
 /*Active*/
 #bayan li:active{
