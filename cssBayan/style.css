@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sono', sans-serif;
+  }
+html{
+    overflow: hidden;
+}
+body{
+    background-color: #FFFBE9;}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+#bayan{
+    max-width: 75vw;
+    margin-left: 12.5vw;
+    color: blue;
+}
+li{
+    list-style: none;
+    border-top: solid;
+    border-color: gray;
+    padding-top: 1vh;
+}
+li label{
+    font-size: 1.5rem;
+}
+.labelName{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+i{
+    transition-duration: 0.5s;
+}
+input {
+    display: none;
+}
+img{
+    max-width:100%;
+    max-height: 30vh;
+}
+#bayan .content{
+    max-height: 0;
+    overflow: hidden;
+    transition-duration: 1s;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+/*Checked*/
+#bayan input[type="radio"]:checked + label{
+    color: black;
+}
+#bayan input[type="radio"]:checked + label .content{
+    max-height: 45vh;
+}
+#bayan input[type="radio"]:checked + label i{
+    transform: rotate(45deg);
+}
+/*Hover*/
+@media (hover: hover) {
+    #bayan:hover {
+        color: black;
+        cursor: cell;
+    }
+    #bayan label:hover{
+        cursor:cell;
+    }
+    #bayan li:hover .content{
+        max-height: 600px;
+    }
+    #bayan li:hover i{
+        transform: rotate(45deg);
+    }
+}
+/*Active*/
+#bayan li:active{
+    color:blue;
+    opacity: 0.7;
+}
+/*Mobile version*/
+@media only screen and (max-width: 320px) and (max-height: 568px){
+    body{
+        font-size: 0.7rem;
+    }
+    .labelName{
+        font-size: 1rem;
+    }
+}
+/*Tablet version*/
+@media only screen and (max-width: 820px) and (max-height: 1180px) and (min-width: 321px) and (min-height: 569px) {
+    body{
+        font-size: 1rem;
+    }
+    .labelName{
+        font-size: 1.2rem;
+    }
+}
